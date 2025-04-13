@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esame PHP Casuale (40 Domande)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Esame PHP Casuale</h1>
+<p>Vengono selezionate casualmente 40 domande da un pool più ampio.</p>
+<div id="quiz-container">
+  <div id="question-container">
+    <div id="question-number"></div>
+    <div id="question"></div>
+  </div>
+  <div id="options-container">
+    <!-- Le opzioni verranno caricate qui da JS -->
+  </div>
+  <div id="feedback"></div>
+  <button id="next-button" style="display: none;">Prossima Domanda</button>
+</div>
+<div id="results-container" style="display: none;">
+  <h2>Risultati Finali</h2>
+  <p>Hai risposto correttamente a <span id="score"></span> su <span id="total-questions"></span> domande.</p>
+  <p>Punteggio: <span id="percentage"></span>%</p>
+  <button id="restart-button">Inizia un Nuovo Esame Casuale</button>
+</div>
+
+<script src="questions.js"></script> <!---- CARICA TUTTE LE 200 DOMANDE ---->
+<script src="script.js"></script>   <!---- LOGICA CON RANDOMIZZAZIONE ---->
+</body>
+</html>

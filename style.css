@@ -1,0 +1,127 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+#quiz-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 20px auto; /* Aggiunto margine sopra */
+}
+
+#question-container {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+#question-number {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+#question {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.option {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: background-color 0.2s;
+}
+
+.option:hover:not(.disabled):not(.correct):not(.incorrect) {
+    background-color: #eef;
+}
+
+.option input[type="radio"] {
+    margin-right: 10px;
+    display: none; /* Nascondiamo il radio button originale */
+}
+
+.option.selected {
+    border-color: #007bff;
+    background-color: #cce5ff;
+}
+
+.option.correct {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    font-weight: bold;
+}
+
+.option.incorrect {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+    font-weight: bold;
+}
+
+.option.disabled {
+    cursor: default;
+    opacity: 0.7;
+}
+
+#feedback {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    min-height: 2.5em; /* Per evitare salti di layout */
+}
+
+#feedback.correct {
+    color: #155724;
+    background-color: #d4edda;
+}
+
+#feedback.incorrect {
+    color: #721c24;
+    background-color: #f8d7da;
+}
+
+button {
+    display: inline-block; /* Modificato per affiancare */
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px; /* Spazio tra bottoni */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#results-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Stile aggiuntivo per centrare il titolo e paragrafo iniziale */
+h1, body > p {
+    text-align: center;
+}
